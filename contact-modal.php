@@ -39,7 +39,7 @@
 
     <div class="row">
       <div class="input-field col m12">
-          <textarea name=enquiry'' id="enquiry" class="materialize-textarea"></textarea>
+          <textarea name='enquiry' id="enquiry" class="materialize-textarea"></textarea>
           <label for="enquiry">Enquiry</label>
       </div>
     </div>
