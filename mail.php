@@ -15,30 +15,12 @@ foreach ($dataWrp as $data) {
 
 var_dump($dataSnd);
 
-$msg_report_01 = $dataSnd['report-01'];
-$msg_report_02 = $dataSnd['report-02'];
-$msg_report_03 = $dataSnd['report-03'];
-$msg_report_04 = $dataSnd['report-04'];
-$msg_report_05 = $dataSnd['report-05'];
-$msg_report_06 = $dataSnd['report-06'];
-$msg_report_07 = $dataSnd['report-07'];
-$msg_report_08 = $dataSnd['report-08'];
 
 
-$report_list =
-$msg_company = $dataSnd['company'];
-$msg_name = $dataSnd['name'];
 $msg_phone = $dataSnd['phone'];
 $msg_email = strip_tags($dataSnd['email']);
-$msg_first_name = $dataSnd['first-name'];
-$msg_last_name = $dataSnd['last-name'];
-$msg_clientphone = $dataSnd['client-address'];
-$msg_clientaddress = $dataSnd['client-phone'];
-$msg_client_email = strip_tags($dataSnd['client-email']);
-$msg_client_gender =  $dataSnd['gender'];
-$msg_client_age =  $dataSnd['age'];
-$msg_booking_date =  $dataSnd['date'];
-$msg_booking_message =  $dataSnd['message'];
+$msg_first_name = $dataSnd['firstName'];
+$msg_last_name = $dataSnd['lastName'];
 $msg_booking_enquiry =  $dataSnd['enquiry'];
 
   $template = '<html><head><meta name="viewport" content="width=device-width"><title>Appointment Email Request</title><style>ii a[href] {color: #424141;} gs li {margin-left: 0px;} .aBn {border-bottom: 1px solid #424141;}</style></head><body><table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #ffffff;" bgcolor="#ffffff"><tr><td style="font-family: sans-serif; font-size: 16px !important; vertical-align: top;" valign="top"> </td><td class="container" style="font-family: sans-serif; font-size: 16px !important; vertical-align: top; display: block; max-width: 580px; width: 100% !important; margin: 0 auto; padding: 0;" valign="top"><div class="content" style="box-sizing: border-box; display: block; max-width: 580px; margin: 0 auto; padding: 0;"><span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0; font-size: 16px !important;">Prudence Consulting - New Booking Request</span><table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-radius: 0 !important; border-left-width: 0 !important; border-right-width: 0 !important; background-color: #ffffff;" bgcolor="#ffffff"><tr><td class="wrapper" style="font-family: sans-serif; font-size: 16px !important; vertical-align: top; box-sizing: border-box; padding: 10px;" valign="top"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;"><tr><td style="font-family: sans-serif; font-size: 16px !important; vertical-align: top;" valign="top"><p style="font-family: sans-serif; font-size: 16px !important; font-weight: normal; color: #424141; margin: 0 0 15px; padding: 0;">Hi there,</p><p style="font-family: sans-serif; font-size: 16px !important; font-weight: normal; color: #424141; margin: 0 0 15px; padding: 0;">A booking request has been submitted to the website.</p>';
@@ -52,11 +34,12 @@ $msg_booking_enquiry =  $dataSnd['enquiry'];
   // echo $template;
 
   // send email
-  $to = 'officeadmin@prudenceconsulting.com.au';
+  $to = 'contact@isaacmartin.co';
+  // $to = 'contact@newcastlecryo.com.au';
 
-  $subject = 'Booking Request From Website';
+  $subject = 'Contact Request From Website';
 
-  $headers = "From: " . strip_tags('noreply@prudenceconsulting.com.au') . "\r\n";
+  $headers = "From: " . strip_tags('noreply@newcastlecryo.com.au') . "\r\n";
   $headers .= "Reply-To: ". ($msg_email) . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";

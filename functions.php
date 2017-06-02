@@ -26,24 +26,6 @@ if (function_exists('add_theme_support'))
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
-
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
@@ -439,40 +421,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
 
-/*------------------------------------*\
-	Custom Post Types
-\*------------------------------------*/
 
-function create_post_type_tests()
-{
-    register_post_type('testimonials', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Testimonial', 'testimonial'), // Rename these to suit
-            'singular_name' => __('Testimonial', 'testimonial'),
-            'add_new' => __('Add New', 'testimonial'),
-            'add_new_item' => __('Add New Report', 'testimonial'),
-            'edit' => __('Edit', 'testimonial'),
-            'edit_item' => __('Edit Testimonial', 'testimonial'),
-            'new_item' => __('New Testimonial', 'testimonial'),
-            'view' => __('View Testimonial', 'testimonial'),
-            'view_item' => __('View Testimonial', 'testimonial'),
-            'search_items' => __('Search Testimonial', 'testimonial'),
-            'not_found' => __('No testimonials found', 'testimonial'),
-            'not_found_in_trash' => __('No Testimonials found in Trash', 'testimonial')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-    ));
-}
 
 
 /*------------------------------------*\
@@ -492,27 +441,32 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 }
 
 
-/* Clean up the admin sidebar navigation *************************************************/
-function remove_admin_menu_items() {
-  $remove_menu_items = array(__('Links'), __('Comments'));
-  global $menu;
-  end ($menu);
-  while (prev($menu)){
-    $item = explode(' ',$menu[key($menu)][0]);
-    if(in_array($item[0] != NULL?$item[0]:"" , $remove_menu_items)){
-      unset($menu[key($menu)]);
-    }
-  }
-}
-add_action('admin_menu', 'remove_admin_menu_items');
-
-//Booking + Contact Forms
 if( function_exists('acf_add_options_page') ) {
 
-	acf_add_options_page('Contact Details');
-	//acf_add_options_page('Contact Form Content');
-
+	acf_add_options_page(array(
+		'page_title' 	=> 'Contact Details',
+		'menu_title'	=> 'Contact Details',
+		'menu_slug' 	=> 'contact-details',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 }
+
+
+// /* Clean up the admin sidebar navigation *************************************************/
+// function remove_admin_menu_items() {
+//   $remove_menu_items = array(__('Links'), __('Comments'));
+//   global $menu;
+//   end ($menu);
+//   while (prev($menu)){
+//     $item = explode(' ',$menu[key($menu)][0]);
+//     if(in_array($item[0] != NULL?$item[0]:"" , $remove_menu_items)){
+//       unset($menu[key($menu)]);
+//     }
+//   }
+// }
+// add_action('admin_menu', 'remove_admin_menu_items');
+
 
 function my_assets() {
 	wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
@@ -523,21 +477,9 @@ function my_assets() {
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 
-// add_action( 'init', 'create_report_tax' );
-//
-// function create_report() {
-// 	register_taxonomy(
-// 		'genre',
-// 		array(
-// 			'label' => __( 'Report Type' ),
-// 			'rewrite' => array( 'slug' => 'report' ),
-// 			'hierarchical' => true,
-// 		)
-// 	);
-// }
 
 
-function buildFilterBar_reports() {
+function buildFilterBar() {
  $filterBar = '<div>';
  	$filterBar .= '<ul class="filter-wrapper">';
  		$filterBar .= '<li class="all-filters filter-active">All</li>';
@@ -549,17 +491,3 @@ function buildFilterBar_reports() {
   $filterBar .= '</div>';
   return $filterBar;
 }
-
-function buildFilterBar_experts() {
- $filterBar = '<div>';
- 	$filterBar .= '<ul class="filter-wrapper">';
- 		$filterBar .= '<li class="all-filters filter-active">All</li>';
-  	$tags = get_terms(array('hide_empty' => TRUE, 'taxonomy' => 'expert_area'));
- 		foreach ( $tags as $tag ) {
- 			$filterBar .= '<li data-filter="'.$tag->slug.'" class="filter-trigger">'.$tag->name.'</li>';
- 		}
- 	$filterBar .= '</ul>';
-  $filterBar .= '</div>';
-  return $filterBar;
-}
-?>

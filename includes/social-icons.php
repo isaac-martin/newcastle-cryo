@@ -6,14 +6,8 @@
   </li>
 
   <li>
-  <a class="valign-wrapper" href="<?php the_field('twitter_url' , 'options');?>">
-        <i class="vertical-align fa fa-twitter fa-circle-thinner"></i>
-    </a>
-  </li>
-
-  <li>
-    <a href="<?php the_field('linkedin_url' , 'options');?>">
-        <i class="fa fa-linkedin fa-circle-thinner"></i>
+  <a class="valign-wrapper" href="<?php the_field('instagram_url' , 'options');?>">
+        <i class="vertical-align fa fa-instagram fa-circle-thinner"></i>
     </a>
   </li>
 

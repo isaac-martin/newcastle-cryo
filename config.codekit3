@@ -9,12 +9,6 @@
 	],
 "creatorBuild": "25813",
 "files": {
-	"\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.gitignore",
-		"oF": 0
-		},
 	"\/404.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -1085,28 +1079,6 @@
 		"oAP": "\/img\/icons\/favicon.ico",
 		"oF": 0
 		},
-	"\/img\/icons\/logo.png": {
-		"ft": 32768,
-		"iS": 28910,
-		"oA": 0,
-		"oAP": "\/img\/icons\/logo.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/img\/icons\/touch.png": {
-		"ft": 32768,
-		"iS": 43393,
-		"oA": 0,
-		"oAP": "\/img\/icons\/touch.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"\/img\/logo.png": {
 		"ft": 32768,
 		"iS": 23548,
@@ -1884,7 +1856,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 502594986,
-	"displayValue": "newcastlecryo",
+	"displayValue": "newcastle-cryo",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry"
 	},

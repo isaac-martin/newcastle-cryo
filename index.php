@@ -2,9 +2,6 @@
 
 	<main class="container no-header-img" id="content">
 		<div class="row">
-			<div class="col m12">
-				<h2 class="t-purple">Medico Legal Matters</h2>
-			</div>
 		</div>
 		<div class="row">
 			<div class="col s12 l8">
