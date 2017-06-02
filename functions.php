@@ -96,14 +96,6 @@ function html5blank_header_scripts()
 				wp_enqueue_script('ajaxchimp'); // Enqueue it!
 
 
-
-        wp_register_script('wps', 'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array('jquery'), '2.0.3'); // Waypoints
-        wp_enqueue_script('wps');
-
-
-        wp_register_script('counter', get_template_directory_uri() . '/js/lib/jquery.counterup.min.js', array('jquery'), '1.0.0'); // Counter Up
-        wp_enqueue_script('counter');
-
         wp_register_script('form', get_template_directory_uri() . '/js/form.js', array('jquery'), '1.0.0'); // Forms
         wp_enqueue_script('form');
 
