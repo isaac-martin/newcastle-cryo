@@ -13,8 +13,7 @@ $.fn.forms = function() {
     $.fn.ajaxForm = function(){
       jQuery.ajax({
           type: "POST",
-          // url: templateDir+'/mail.php',
-          url: 'http://pg-nc:8888/wp-content/themes/newcastle-cryo/mail.php',
+          url: templateDir+'/mail.php',
           data: { data : formdata },
 
         success: function(data) {
