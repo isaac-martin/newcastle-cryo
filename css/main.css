@@ -6579,7 +6579,7 @@ header {
   height: 60px; }
   @media screen and (max-width: 600px) {
     .logo-img {
-      width: 180px; } }
+      height: 40px; } }
 
 .scroll {
   background: white;
@@ -6596,7 +6596,7 @@ img {
   width: 100%; }
 
 @media screen and (max-width: 600px) {
-  .nav.col.s9 {
+  .nav.col.s10 {
     width: 100vw;
     position: absolute;
     top: 70px;
@@ -6610,7 +6610,7 @@ img {
     -o-transition: 0.7s;
     -webkit-transition: 0.7s;
     transition: 0.7s; }
-    .nav.col.s9.active {
+    .nav.col.s10.active {
       right: 0; } }
 
 .nav ul {

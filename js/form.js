@@ -3,7 +3,7 @@
 $.fn.forms = function() {
     var formdata
     $('#contact').submit(function(e){
-      e.preventDefault();
+      // e.preventDefault();
       formdata = $( this ).serializeArray();
       formdata = JSON.stringify(formdata);
       console.log(formdata);

@@ -53,7 +53,7 @@ header {
   height: 60px;
 
   @include mq-small {
-    width: 180px;
+    height: 40px;
   }
 }
 
@@ -86,7 +86,7 @@ img {
   width: 100%;
 }
 
-.nav.col.s9 {
+.nav.col.s10 {
     @include mq-small {
       width: 100vw;
       position: absolute;
