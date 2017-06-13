@@ -14,7 +14,7 @@
       </div>
     </div>
 
-<!-- <form method="POST" action="" id="contact">
+<form method="POST" action="" id="contact">
     <div class="row">
       <div class="input-field col s12 m6">
           <input id="firstName" name="First Name" type="text" />
@@ -47,10 +47,10 @@
     <button class="btn waves-effect waves-light btn-wht" type="submit" name="action" value='Submit'>Submit
       <i class="material-icons right">send</i>
     </button>
-    </form> -->
+    </form>
 
 
-    <div class="form-wrap delay2">
+    <!-- <div class="form-wrap delay2">
     		<form method="POST" action="" id="contact" autocomplete="off" class="no-ss">
     			<div class="left-form-col">
     				<h3>Your Details</h3>
@@ -60,7 +60,6 @@
     				</div>
     				<div class="field-wrap">
     					<input type="text" name="email" id="email" required/>
-    					<!-- <input type="text" name="fake_email" id="honeypot" class=""/> -->
     					<label for="email">Email</label>
     				</div>
     				<div class="field-wrap">
@@ -194,6 +193,6 @@
     					</div>
     				</button>
     			</div>
-    		</form>
+    		</form> -->
     <div id="form-message"></div>
 </section>
