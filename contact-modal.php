@@ -17,29 +17,29 @@
 <form method="POST" action="" id="contact">
     <div class="row">
       <div class="input-field col s12 m6">
-          <input id="firstName" name="firstName" type="text" />
-          <label for="firstName">First Name</label><br />
+          <input id="firstName" name="firstName" type="text" required/>
+          <label for="firstName">First Name *</label><br />
       </div>
       <div class="col s12 m6 input-field">
-          <input id="lastName" name="lastName" type="text" />
-          <label for="lastName">Last Name</label><br />
+          <input id="lastName" name="lastName" type="text" required/>
+          <label for="lastName">Last Name *</label><br />
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col s12 m6">
-          <input id="phone" name="phone" type="text" />
-          <label for="phone">Phone</label><br />
+          <input id="phone" name="phone" type="text" required />
+          <label for="phone">Phone *</label><br />
       </div>
       <div class="input-field col s12 m6">
-          <input id="email" name="email" type="email" />
-          <label for="email">Email</label><br />
+          <input id="email" name="email" type="email" required/>
+          <label for="email">Email *</label><br />
       </div>
     </div>
 
     <div class="row">
       <div class="input-field col m12">
-          <textarea name='enquiry' id="enquiry" class="materialize-textarea"></textarea>
+          <textarea name='enquiry' id="enquiry" required class="materialize-textarea"></textarea>
           <label for="enquiry">Enquiry</label>
       </div>
     </div>
